@@ -1,6 +1,6 @@
 # Staff.py
 
-from person import Person
+from .person import Person
 
 class Staff(Person):
     """

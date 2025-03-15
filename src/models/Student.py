@@ -1,5 +1,5 @@
 # Student.py
-from person import Person
+from .person import Person
 
 class Student(Person):
 
