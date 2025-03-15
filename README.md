@@ -4,10 +4,21 @@ MSc Data Science: Coventry University UK
 Author: Jayampathy Balasuriya
 Student NO: COMScDS242P-009
 
-# 🎓 School Management System (OOP in Python)
+# Question 1 – OOP for School Management System (40 Marks) – [word count: 800 words]
+Imagine you're tasked with creating a management system for a school. The system should
+handle various roles like students, teachers, and staff, while also tracking grades, classes,
+schedules, and other key information. Using Object-Oriented Programming (OOP) principles,
+you'll develop a system that can handle multiple responsibilities, track different entities, and
+perform actions specific to each role.
+
+Below are the tasks to guide you through the system development. Your responses should
+demonstrate a solid understanding of OOP concepts, including inheritance, encapsulation,
+polymorphism, and method overriding, applied to the school context.
+
+## 🎓 School Management System (OOP in Python)
 This project is a **School Management System** developed using **Object-Oriented Programming (OOP)** principles in Python. It is part of the **Programming for Data Science** coursework and demonstrates concepts such as **inheritance, encapsulation, polymorphism, and method overriding**.
 
-## 📌 Features
+### 📌 Features
 - 👨‍🎓 **Student Management** (Track grades, attendance, etc.)
 - 👨‍🏫 **Teacher Management** (Class scheduling, subject assignments)
 - 🏢 **Staff Management** (Salary calculation, administrative tasks)
