@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE Configurations
+.vscode/
+.idea/
+*.iml
+
+# Python Dependencies
+*.egg-info/
+pip-log.txt
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
