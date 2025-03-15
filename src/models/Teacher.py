@@ -1,6 +1,6 @@
 # Teacher.py
 
-from .Person import Person
+from .person import Person
 
 class Teacher(Person):
 
