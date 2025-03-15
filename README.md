@@ -26,3 +26,17 @@ This project is a **School Management System** developed using **Object-Oriented
 - 🔁 **Polymorphism** (Unified handling of students, teachers, and staff)
 - 📊 **Data Handling** (Grade calculation, attendance tracking)
 
+### 📌 Project Structure
+programming-data-science-cw/
+├── src/
+│   ├── __init__.py      # Indicates src is a package
+│   ├── main.py
+│   └── models/
+│       ├── __init__.py  # Indicates models is a package
+│       ├── person.py    # Person - Main Class
+    │       ├── student.py   # Student - Sub Class  
+│           ├── teacher.py   # Teacher - Sub Class
+│           └── staff.py     # Staff - Sub Class
+├── .gitignore
+├── README.md
+└── requirements.txt
