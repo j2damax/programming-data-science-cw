@@ -12,7 +12,6 @@ This project is a **School Management System** developed using **Object-Oriented
 - **Data Handling**: Perform grade calculations and attendance tracking.
 
 ## Project Structure
-programming-data-science-cw/ ├── src/ │ ├── init.py # Package initialization │ ├── main.py # Main program entry point │ └── models/ │ ├── init.py # Package initialization │ ├── person.py # Base class for all roles │ ├── student.py # Student subclass │ ├── teacher.py # Teacher subclass │ └── staff.py # Staff subclass ├── .gitignore ├── README.md └── requirements.txt
 
 ## How to Run
 1. Clone the repository:
