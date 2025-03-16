@@ -9,9 +9,11 @@ class Teacher(Person):
     Teacher sub class inhertics common attributes and methods from common class Person
     """
 
-    def __init__(self, name, age, address, teacher_id, ssn=None):
+    def __init__(self, name, age, address, teacher_id, subject=None, class_schedule=None, ssn=None):
         super().__init__(name, age, address) # Inhertited attribute for students from Person 
         self.teacher_id = teacher_id # Specialized attribute for teachers
+        self.subject = subject  # Subject the teacher specializes in
+        self.class_schedule = class_schedule if class_schedule else []  # List to store class schedules
     
 
     def role_duties(self):
@@ -23,3 +25,12 @@ class Teacher(Person):
         """
         return f"{self.name} is a teacher with ID {self.teacher_id}. Their responsibilities include taking classes, preparing lessons, and grading assignments."
     
+    def schedule_classes(self, schedule):
+        """
+        Assign a class schedule for the teacher.
+
+        Args:
+            schedule (list): A list of class schedules (e.g., ["Monday 9 AM - Math", "Tuesday 11 AM - Science"]).
+        """
+        self.class_schedule.extend(schedule)
+        return f"Class schedule updated for {self.name}: {', '.join(self.class_schedule)}"    

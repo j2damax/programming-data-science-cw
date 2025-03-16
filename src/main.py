@@ -32,5 +32,15 @@ def main():
     print(teacher.role_duties())
     print(staff.role_duties())
 
+ # Demonstrate the usage of subject and class_schedule for Teacher
+    print(f"Teacher {teacher.name} specializes in {teacher.subject}.")
+    
+    # Assign a class schedule to the teacher
+    schedule = ["Monday 9 AM - Algebra", "Wednesday 11 AM - Geometry", "Friday 1 PM - Calculus"]
+    updated_schedule = teacher.schedule_classes(schedule)
+    
+    # Display the updated class schedule
+    print(updated_schedule)    
+
 if __name__ == "__main__":
     main()
