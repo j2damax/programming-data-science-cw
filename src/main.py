@@ -42,5 +42,13 @@ def main():
     # Display the updated class schedule
     print(updated_schedule)    
 
+    # Mark attendance for classes
+    print(student.attendance("Math", True))  # Alice attended Math
+    print(student.attendance("Science", False))  # Alice missed Science
+    print(student.attendance("English", True))  # Alice attended English
+
+    # Display attendance summary
+    print(student.get_attendance_summary())    
+
 if __name__ == "__main__":
     main()
