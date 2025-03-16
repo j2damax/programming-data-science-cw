@@ -1,5 +1,4 @@
-
-from models.student import Student
+from student import Student
 
 def main():
     # Create a student instance

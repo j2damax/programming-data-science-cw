@@ -1,5 +1,6 @@
-# Student.py
-from .person import Person
+# student.py
+
+from person import Person
 
 class Student(Person):
 
@@ -9,7 +10,7 @@ class Student(Person):
     """
 
     def __init__(self, name, age, address, student_id):
-        super.__init__(name, age, address) # Inhertited attribute for students from Person 
+        super().__init__(name, age, address) # Inhertited attribute for students from Person 
         self.student_id = student_id # Specialized attribute for Student
         self.grades = {}  # Dictionary to store grades for subjects
 

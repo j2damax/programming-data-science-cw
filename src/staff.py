@@ -1,6 +1,6 @@
-# Staff.py
+# staff.py
 
-from .person import Person
+from person import Person
 
 class Staff(Person):
     """
@@ -9,5 +9,5 @@ class Staff(Person):
     """
 
     def __init__(self, name, age, address, staff_id):
-        super.__init__(name, age, address) # Inhertited attribute for students from Person 
+        super().__init__(name, age, address) # Inhertited attribute for students from Person 
         self.staff_id = staff_id # Specialized attribute for Staff

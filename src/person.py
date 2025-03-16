@@ -1,4 +1,4 @@
-# Person.py
+# person.py
 
 class Person:
     
@@ -9,7 +9,7 @@ class Person:
     """
     Define common attributes 
     """
-    def __ini__(self, name, age, address):
+    def __init__(self, name, age, address):
         self.name = name
         self.age = age
         self.address = address
