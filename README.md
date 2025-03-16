@@ -1,42 +1,31 @@
-COURSE WORK: PROGRAMMING FOR DATA SCIENCE
-2024.2 BATCH
-MSc Data Science: Coventry University UK
-Author: Jayampathy Balasuriya
-Student NO: COMScDS242P-009
+# School Management System (OOP in Python)
 
-# Question 1 – OOP for School Management System (40 Marks) – [word count: 800 words]
-Imagine you're tasked with creating a management system for a school. The system should
-handle various roles like students, teachers, and staff, while also tracking grades, classes,
-schedules, and other key information. Using Object-Oriented Programming (OOP) principles,
-you'll develop a system that can handle multiple responsibilities, track different entities, and
-perform actions specific to each role.
+This project is a **School Management System** developed using **Object-Oriented Programming (OOP)** principles in Python. It is part of the **Programming for Data Science** coursework for the MSc Data Science program at Coventry University.
 
-Below are the tasks to guide you through the system development. Your responses should
-demonstrate a solid understanding of OOP concepts, including inheritance, encapsulation,
-polymorphism, and method overriding, applied to the school context.
+## Features
+- **Student Management**: Track grades, attendance, and other student-related information.
+- **Teacher Management**: Manage class schedules and subject assignments.
+- **Staff Management**: Handle administrative tasks and salary calculations.
+- **Encapsulation**: Secure sensitive information like Social Security Numbers (SSN).
+- **Polymorphism**: Unified handling of students, teachers, and staff roles.
+- **Inheritance**: Reuse common attributes and methods across different roles.
+- **Data Handling**: Perform grade calculations and attendance tracking.
 
-## 🎓 School Management System (OOP in Python)
-This project is a **School Management System** developed using **Object-Oriented Programming (OOP)** principles in Python. It is part of the **Programming for Data Science** coursework and demonstrates concepts such as **inheritance, encapsulation, polymorphism, and method overriding**.
+## Project Structure
+programming-data-science-cw/ ├── src/ │ ├── init.py # Package initialization │ ├── main.py # Main program entry point │ └── models/ │ ├── init.py # Package initialization │ ├── person.py # Base class for all roles │ ├── student.py # Student subclass │ ├── teacher.py # Teacher subclass │ └── staff.py # Staff subclass ├── .gitignore ├── README.md └── requirements.txt
 
-### 📌 Features
-- 👨‍🎓 **Student Management** (Track grades, attendance, etc.)
-- 👨‍🏫 **Teacher Management** (Class scheduling, subject assignments)
-- 🏢 **Staff Management** (Salary calculation, administrative tasks)
-- 🔒 **Encapsulation** (Secure sensitive information like SSN)
-- 🔁 **Polymorphism** (Unified handling of students, teachers, and staff)
-- 📊 **Data Handling** (Grade calculation, attendance tracking)
+## How to Run
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd programming-data-science-cw
 
-### 📌 Project Structure
-programming-data-science-cw/
-├── src/
-│   ├── __init__.py      # Indicates src is a package
-│   ├── main.py
-│   └── models/
-│       ├── __init__.py  # Indicates models is a package
-│       ├── person.py    # Person - Main Class
-    │       ├── student.py   # Student - Sub Class  
-│           ├── teacher.py   # Teacher - Sub Class
-│           └── staff.py     # Staff - Sub Class
-├── .gitignore
-├── README.md
-└── requirements.txt
+2. Run the program:
+    python src/main.py
+
+Author
+Jayampathy Balasuriya
+Student No: COMScDS242P-009
+MSc Data Science, Coventry University
+
+    
