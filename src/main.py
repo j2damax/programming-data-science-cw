@@ -50,5 +50,39 @@ def main():
     # Display attendance summary
     print(student.get_attendance_summary())    
 
+    # Create a staff instance
+    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
+
+    # Calculate the salary
+    calculated_salary = staff.calculate_salary(bonus_per_year=1200)
+    print(f"Calculated Salary for {staff.name}: ${calculated_salary}")
+
+    # Get the salary
+    print(f"Retrieved Salary for {staff.name}: ${staff.get_salary()}")
+
+     # Create instances of Student, Teacher, and Staff
+    student = Student("Alice", 20, "123 Maple St", "S001")
+    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", "Mathematics")
+    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
+
+    # Store all individuals in a list
+    individuals = [student, teacher, staff]
+
+    # Display information for all individuals using polymorphism
+    display_individual_info(individuals)
+
+
+def display_individual_info(individuals):
+    """
+    Display basic information for all individuals in the system.
+
+    Args:
+        individuals (list): A list of Person objects (students, teachers, staff).
+    """
+    for individual in individuals:
+        print(f"Name: {individual.name}, Age: {individual.age}")
+        print(f"Role Duties: {individual.role_duties()}")
+        print("-" * 40)
+
 if __name__ == "__main__":
     main()
