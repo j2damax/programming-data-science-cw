@@ -9,8 +9,8 @@ class Student(Person):
     Student sub class inhertics common attributes and methods from common class Person
     """
 
-    def __init__(self, name, age, address, student_id):
-        super().__init__(name, age, address) # Inhertited attribute for students from Person 
+    def __init__(self, name, age, address, student_id, ssn=None):
+        super().__init__(name, age, address, ssn) # Inhertited attribute for students from Person 
         self.student_id = student_id # Specialized attribute for Student
         self.grades = {}  # Dictionary to store grades for subjects
 
