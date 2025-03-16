@@ -40,7 +40,15 @@ class Student(Person):
         return average
 
 
+    def role_duties(self):
+        """
+        Describe specific responsibilities for a student.
 
+        Returns:
+            str: A description of student responsibilities.
+        """
+        return f"{self.name} is a student with ID {self.student_id}. Their responsibilities include attending classes, completing assignments, and taking exams."
+   
 
 
 

@@ -24,8 +24,7 @@ class Person:
         self.address = address
         self.__ssn = ssn  # Private attribute for Social Security Number
 
-
-     # Getter method for SSN
+    # Getter method for SSN
     def get_ssn(self):
         """
         Get the Social Security Number (SSN) of the person.
@@ -48,3 +47,11 @@ class Person:
         else:
             raise ValueError("SSN must be a 9-digit string.")
 
+    def role_duties(self):
+        """
+        Describe general responsibilities for a person.
+
+        Returns:
+            str: A description of general responsibilities.
+        """
+        return f"{self.name} has general responsibilities."
