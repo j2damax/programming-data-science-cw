@@ -4,27 +4,35 @@ from staff import Staff
 
 def main():
 
+    # a. Inheritance in School Classes:
     # Demonstrate inheritance
     #demonstrate_inheritance()
 
+    # b. Assigning Grades Method for Students:
     # Demonstrate assigning grades
     #demonstrate_assigning_grades()
 
+    # c. Encapsulation for Sensitive Information:
     # Demonstrate encapsulation
     #demonstrate_encapsulation()
 
+    # d. Class-Specific Responsibilities with Method Overriding:
     # Demonstrate role-specific responsibilities
     #demonstrate_role_duties()
 
+    # e. Specialized Teacher Class:
     # Demonstrate the specialized Teacher class
     #demonstrate_teacher_class()
 
+    # f. Attendance Tracking for Students:
     # Demonstrate attendance tracking for students
     #demonstrate_attendance_tracking()
 
+    # g. Staff Salary Management:
     # Demonstrate staff salary management
     #demonstrate_staff_salary_management()
 
+    # h. Polymorphism in School System:
     # Demonstrate polymorphism
     demonstrate_polymorphism()
     
