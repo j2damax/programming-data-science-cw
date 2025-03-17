@@ -11,7 +11,16 @@ def main():
     #demonstrate_assigning_grades()
 
     # Demonstrate encapsulation
-    demonstrate_encapsulation()
+    #demonstrate_encapsulation()
+
+    # Demonstrate role-specific responsibilities
+    #demonstrate_role_duties()
+
+    # Demonstrate the specialized Teacher class
+    #demonstrate_teacher_class()
+
+     # Demonstrate attendance tracking for students
+    demonstrate_attendance_tracking()
     
     return
     # Create a student instance
@@ -156,6 +165,67 @@ def demonstrate_encapsulation():
     # Access the updated SSN using the getter method
     print(f"Updated Student {student.name}'s SSN (via getter): {student.get_ssn()}")
     print(f"Updated Teacher {teacher.name}'s SSN (via getter): {teacher.get_ssn()}")
+
+
+def demonstrate_role_duties():
+    """
+    d. Class-Specific Responsibilities with Method Overriding:
+    Demonstrates the role_duties() method and its overriding in the Student, Teacher, and Staff classes.
+    """
+    # Create instances of Student, Teacher, and Staff
+    student = Student("Alice", 20, "123 Maple St", "S001")
+    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", subject="Mathematics")
+    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
+
+    # Call the role_duties() method for each instance
+    print("Role-Specific Responsibilities:")
+    print(f"Student: {student.role_duties()}")
+    print(f"Teacher: {teacher.role_duties()}")
+    print(f"Staff: {staff.role_duties()}")
+
+def demonstrate_teacher_class():
+    """
+    e. Specialized Teacher Class:
+    Demonstrates the specialized Teacher class with attributes and methods.
+    """
+    # Create a teacher instance
+    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", subject="Mathematics")
+
+    # Display teacher's basic information and subject specialization
+    print(f"Teacher Name: {teacher.name}")
+    print(f"Teacher Age: {teacher.age}")
+    print(f"Teacher Address: {teacher.address}")
+    print(f"Teacher ID: {teacher.teacher_id}")
+    print(f"Subject Specialization: {teacher.subject}")
+
+    # Assign a class schedule to the teacher
+    schedule = ["Monday 9 AM - Algebra", "Wednesday 11 AM - Geometry", "Friday 1 PM - Calculus"]
+    updated_schedule = teacher.schedule_classes(schedule)
+
+    # Display the updated class schedule
+    print(f"Updated Class Schedule for {teacher.name}:")
+    print(updated_schedule)
+
+    # Display teacher's role-specific duties
+    print(f"Role Duties: {teacher.role_duties()}")
+
+
+def demonstrate_attendance_tracking():
+    """
+    Demonstrates the attendance() method in the Student class.
+    """
+    # Create a student instance
+    student = Student("Alice", 20, "123 Maple St", "S001")
+
+    # Mark attendance for classes
+    print(student.attendance("Math", True))  # Alice attended Math
+    print(student.attendance("Science", False))  # Alice missed Science
+    print(student.attendance("English", True))  # Alice attended English
+
+    # Display the overall attendance summary
+    print("Overall Attendance Summary:")
+    print(student.get_attendance_summary())
+
 
 
 def display_individual_info(individuals):
