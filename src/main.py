@@ -3,6 +3,12 @@ from teacher import Teacher
 from staff import Staff
 
 def main():
+
+    #a. Inheritance in School Classes:
+    # Demonstrate inheritance
+    demonstrate_inheritance()
+
+    return
     # Create a student instance
     student = Student("Alice", 20, "123 Maple St", "S001")
     
@@ -70,6 +76,37 @@ def main():
 
     # Display information for all individuals using polymorphism
     display_individual_info(individuals)
+
+def demonstrate_inheritance():
+    """
+    a. Inheritance in School Classes:
+    Demonstrates the use of inheritance in the school management system.
+    """
+    # Create instances of Student, Teacher, and Staff
+    student = Student("Alice", 20, "123 Maple St", "S001")
+    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", "Mathematics")
+    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
+
+    # Display common attributes (inherited from Person)
+    print("Common Attributes (Inherited from Person):")
+    print(f"Student: Name = {student.name}, Age = {student.age}, Address = {student.address}")
+    print(f"Teacher: Name = {teacher.name}, Age = {teacher.age}, Address = {teacher.address}")
+    print(f"Staff: Name = {staff.name}, Age = {staff.age}, Address = {staff.address}")
+    print("-" * 40)
+
+    # Display specialized attributes and methods
+    print("Specialized Attributes and Methods:")
+    print(f"Student ID: {student.student_id}")
+    print(f"Teacher ID: {teacher.teacher_id}, Subject: {teacher.subject}")
+    print(f"Staff ID: {staff.staff_id}, Base Salary: {staff.base_salary}, Years of Service: {staff.years_of_service}")
+    print("-" * 40)
+
+    # Call role-specific methods
+    print("Role-Specific Duties:")
+    print(student.role_duties())
+    print(teacher.role_duties())
+    print(staff.role_duties())
+    print("-" * 40)
 
 
 def display_individual_info(individuals):
