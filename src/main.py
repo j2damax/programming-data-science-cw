@@ -8,7 +8,10 @@ def main():
     #demonstrate_inheritance()
 
     # Demonstrate assigning grades
-    demonstrate_assigning_grades()
+    #demonstrate_assigning_grades()
+
+    # Demonstrate encapsulation
+    demonstrate_encapsulation()
     
     return
     # Create a student instance
@@ -132,6 +135,27 @@ def demonstrate_assigning_grades():
     print(f"Grades assigned to {student.name}: {student.grades}")
     print(f"Average grade for {student.name}: {average_grade:.2f}")
 
+def demonstrate_encapsulation():
+    """
+    c. Encapsulation for Sensitive Information:
+    Demonstrates encapsulation for the 'ssn' attribute in the Person class.
+    """
+    # Create a student instance
+    student = Student("Alice", 20, "123 Maple St", "S001", ssn="123-45-6789")
+    # Create a teacher instance
+    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", subject="Mathematics", ssn="987-65-4321")
+
+    # Access the SSN using the getter method
+    print(f"Student {student.name}'s SSN (via getter): {student.get_ssn()}")
+    print(f"Teacher {teacher.name}'s SSN (via getter): {teacher.get_ssn()}")
+
+    # Modify the SSN using the setter method
+    student.set_ssn("11-22-333")
+    teacher.set_ssn("99-88-777")
+
+    # Access the updated SSN using the getter method
+    print(f"Updated Student {student.name}'s SSN (via getter): {student.get_ssn()}")
+    print(f"Updated Teacher {teacher.name}'s SSN (via getter): {teacher.get_ssn()}")
 
 
 def display_individual_info(individuals):
