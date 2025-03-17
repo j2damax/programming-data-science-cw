@@ -19,8 +19,11 @@ def main():
     # Demonstrate the specialized Teacher class
     #demonstrate_teacher_class()
 
-     # Demonstrate attendance tracking for students
-    demonstrate_attendance_tracking()
+    # Demonstrate attendance tracking for students
+    #demonstrate_attendance_tracking()
+
+    # Demonstrate staff salary management
+    demonstrate_staff_salary_management()
     
     return
     # Create a student instance
@@ -212,6 +215,7 @@ def demonstrate_teacher_class():
 
 def demonstrate_attendance_tracking():
     """
+    f. Attendance Tracking for Students:
     Demonstrates the attendance() method in the Student class.
     """
     # Create a student instance
@@ -225,6 +229,30 @@ def demonstrate_attendance_tracking():
     # Display the overall attendance summary
     print("Overall Attendance Summary:")
     print(student.get_attendance_summary())
+
+
+def demonstrate_staff_salary_management():
+    """
+    g. Staff Salary Management:
+    Demonstrates the calculate_salary() and get_salary() methods in the Staff class.
+    """
+    # Create a staff instance
+    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
+
+    # Display staff's basic information
+    print(f"Staff Name: {staff.name}")
+    print(f"Staff Age: {staff.age}")
+    print(f"Staff Address: {staff.address}")
+    print(f"Staff ID: {staff.staff_id}")
+    print(f"Base Salary: ${staff.base_salary}")
+    print(f"Years of Service: {staff.years_of_service}")
+
+    # Calculate the salary
+    calculated_salary = staff.calculate_salary(bonus_per_year=1200)
+    print(f"Calculated Salary for {staff.name}: ${calculated_salary}")
+
+    # Retrieve the salary using get_salary()
+    print(f"Retrieved Salary for {staff.name}: ${staff.get_salary()}")
 
 
 
