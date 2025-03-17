@@ -23,7 +23,10 @@ def main():
     #demonstrate_attendance_tracking()
 
     # Demonstrate staff salary management
-    demonstrate_staff_salary_management()
+    #demonstrate_staff_salary_management()
+
+    # Demonstrate polymorphism
+    demonstrate_polymorphism()
     
     return
     # Create a student instance
@@ -253,6 +256,25 @@ def demonstrate_staff_salary_management():
 
     # Retrieve the salary using get_salary()
     print(f"Retrieved Salary for {staff.name}: ${staff.get_salary()}")
+
+def demonstrate_polymorphism():
+    """
+    Demonstrates polymorphism by handling different roles (Student, Teacher, Staff) uniformly.
+    """
+    # Create instances of Student, Teacher, and Staff
+    student = Student("Alice", 20, "123 Maple St", "S001")
+    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", subject="Mathematics")
+    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
+
+    # Store all individuals in a list
+    individuals = [student, teacher, staff]
+
+    # Display information for all individuals using polymorphism
+    print("Displaying Information for All Individuals:")
+    for individual in individuals:
+        print(f"Name: {individual.name}, Age: {individual.age}, Address: {individual.address}")
+        print(f"Role Duties: {individual.role_duties()}")
+        print("-" * 40)
 
 
 
