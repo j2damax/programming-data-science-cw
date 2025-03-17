@@ -4,10 +4,12 @@ from staff import Staff
 
 def main():
 
-    #a. Inheritance in School Classes:
     # Demonstrate inheritance
-    demonstrate_inheritance()
+    #demonstrate_inheritance()
 
+    # Demonstrate assigning grades
+    demonstrate_assigning_grades()
+    
     return
     # Create a student instance
     student = Student("Alice", 20, "123 Maple St", "S001")
@@ -107,6 +109,29 @@ def demonstrate_inheritance():
     print(teacher.role_duties())
     print(staff.role_duties())
     print("-" * 40)
+
+def demonstrate_assigning_grades():
+    """
+    b. Assigning Grades Method for Students:
+    Demonstrates the assign_grades() method in the Student class.
+    """
+    # Create a student instance
+    student = Student("Alice", 20, "123 Maple St", "S001")
+
+    # Dictionary of subjects with their corresponding grades
+    grades = {
+        "Math": 90,
+        "Science": 85,
+        "English": 88
+    }
+
+    # Assign grades and calculate the average grade
+    average_grade = student.assign_grades(grades)
+
+    # Display the assigned grades and the calculated average
+    print(f"Grades assigned to {student.name}: {student.grades}")
+    print(f"Average grade for {student.name}: {average_grade:.2f}")
+
 
 
 def display_individual_info(individuals):
