@@ -3,107 +3,87 @@ from teacher import Teacher
 from staff import Staff
 
 def main():
-
-    # a. Inheritance in School Classes:
-    # Demonstrate inheritance
-    #demonstrate_inheritance()
-
-    # b. Assigning Grades Method for Students:
-    # Demonstrate assigning grades
-    #demonstrate_assigning_grades()
-
-    # c. Encapsulation for Sensitive Information:
-    # Demonstrate encapsulation
-    #demonstrate_encapsulation()
-
-    # d. Class-Specific Responsibilities with Method Overriding:
-    # Demonstrate role-specific responsibilities
-    #demonstrate_role_duties()
-
-    # e. Specialized Teacher Class:
-    # Demonstrate the specialized Teacher class
-    #demonstrate_teacher_class()
-
-    # f. Attendance Tracking for Students:
-    # Demonstrate attendance tracking for students
-    #demonstrate_attendance_tracking()
-
-    # g. Staff Salary Management:
-    # Demonstrate staff salary management
-    #demonstrate_staff_salary_management()
-
-    # h. Polymorphism in School System:
-    # Demonstrate polymorphism
-    demonstrate_polymorphism()
-    
-    return
-    # Create a student instance
-    student = Student("Alice", 20, "123 Maple St", "S001")
-    
-    # Dictionary of subjects with their corresponding grades
-    grades = {
-        "Math": 90,
-        "Science": 85,
-        "English": 88
+    """
+    Main function to prompt the user to select a demonstration option.
+    """
+    options = {
+        "a": demonstrate_inheritance,
+        "b": demonstrate_assigning_grades,
+        "c": demonstrate_encapsulation,
+        "d": demonstrate_role_duties,
+        "e": demonstrate_teacher_class,
+        "f": demonstrate_attendance_tracking,
+        "g": demonstrate_staff_salary_management,
+        "h": demonstrate_polymorphism,
+        "x": exit_program
     }
-    
-    # Assign grades and calculate the average grade
-    average_grade = student.assign_grades(grades)
-    
-    # Display the assigned grades and the calculated average
-    print("Grades assigned:", student.grades)
-    print("Average grade:", average_grade)
 
-    # Access the SSN using the getter method
-    print("Student SSN:", student.get_ssn())
+    while True:
+        # Display the options to the user
+        print("\nPlease select an option to demonstrate:")
+        print("a) Demonstrate Inheritance")
+        print("b) Demonstrate assigning grades")
+        print("c) Demonstrate encapsulation")
+        print("d) Demonstrate role-specific responsibilities")
+        print("e) Demonstrate the specialized Teacher class")
+        print("f) Demonstrate attendance tracking for students")
+        print("g) Demonstrate staff salary management")
+        print("h) Demonstrate polymorphism")
+        print("x) Exit the program")
 
-    # Create instances of Student, Teacher, and Staff
-    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001")
-    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001")
+        # Prompt the user for input
+        choice = input("Enter your choice (a-h or x to exit): ").strip().lower()
+        if choice in options:
+            print(f"\nYou selected option '{choice}'.")
+            # Call the corresponding function
+            options[choice]()
+        else:
+            print("Invalid choice. Please enter a valid option (a-h or x to exit).")
 
-    # Display role-specific duties
-    print(student.role_duties())
-    print(teacher.role_duties())
-    print(staff.role_duties())
+def main():
+    """
+    Main function to prompt the user to select a demonstration option.
+    """
+    options = {
+        "a": demonstrate_inheritance,
+        "b": demonstrate_assigning_grades,
+        "c": demonstrate_encapsulation,
+        "d": demonstrate_role_duties,
+        "e": demonstrate_teacher_class,
+        "f": demonstrate_attendance_tracking,
+        "g": demonstrate_staff_salary_management,
+        "h": demonstrate_polymorphism,
+        "x": exit_program
+    }
 
- # Demonstrate the usage of subject and class_schedule for Teacher
-    print(f"Teacher {teacher.name} specializes in {teacher.subject}.")
-    
-    # Assign a class schedule to the teacher
-    schedule = ["Monday 9 AM - Algebra", "Wednesday 11 AM - Geometry", "Friday 1 PM - Calculus"]
-    updated_schedule = teacher.schedule_classes(schedule)
-    
-    # Display the updated class schedule
-    print(updated_schedule)    
+    while True:
+        # Display the options to the user
+        print("\nPlease select an option to demonstrate:")
+        print("a) Demonstrate Inheritance")
+        print("b) Demonstrate assigning grades")
+        print("c) Demonstrate encapsulation")
+        print("d) Demonstrate role-specific responsibilities")
+        print("e) Demonstrate the specialized Teacher class")
+        print("f) Demonstrate attendance tracking for students")
+        print("g) Demonstrate staff salary management")
+        print("h) Demonstrate polymorphism")
+        print("x) Exit the program")
 
-    # Mark attendance for classes
-    print(student.attendance("Math", True))  # Alice attended Math
-    print(student.attendance("Science", False))  # Alice missed Science
-    print(student.attendance("English", True))  # Alice attended English
+        # Prompt the user for input
+        choice = input("Enter your choice (a-h or x to exit): ").strip().lower()
+        if choice in options:
+            print(f"\nYou selected option '{choice}'.")
+            # Call the corresponding function
+            options[choice]()
+        else:
+            print("Invalid choice. Please enter a valid option (a-h or x to exit).")
 
-    # Display attendance summary
-    print(student.get_attendance_summary())    
-
-    # Create a staff instance
-    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
-
-    # Calculate the salary
-    calculated_salary = staff.calculate_salary(bonus_per_year=1200)
-    print(f"Calculated Salary for {staff.name}: ${calculated_salary}")
-
-    # Get the salary
-    print(f"Retrieved Salary for {staff.name}: ${staff.get_salary()}")
-
-     # Create instances of Student, Teacher, and Staff
-    student = Student("Alice", 20, "123 Maple St", "S001")
-    teacher = Teacher("Mr. Smith", 45, "456 Oak St", "T001", "Mathematics")
-    staff = Staff("Ms. Johnson", 35, "789 Pine St", "ST001", base_salary=35000, years_of_service=5)
-
-    # Store all individuals in a list
-    individuals = [student, teacher, staff]
-
-    # Display information for all individuals using polymorphism
-    display_individual_info(individuals)
+def exit_program():
+    """
+    Exits the program.
+    """
+    print("Exiting the program. Goodbye!")
+    exit()
 
 def demonstrate_inheritance():
     """
