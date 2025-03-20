@@ -25,12 +25,10 @@ class Teacher(Person):
         """
         return f"{self.name} is a teacher with ID {self.teacher_id}. Their responsibilities include taking classes, preparing lessons, and grading assignments."
     
+    
     def schedule_classes(self, schedule):
         """
         Assign a class schedule for the teacher.
-
-        Args:
-            schedule (list): A list of class schedules (e.g., ["Monday 9 AM - Math", "Tuesday 11 AM - Science"]).
         """
         self.class_schedule.extend(schedule)
         return f"Class schedule updated for {self.name}: {', '.join(self.class_schedule)}"    

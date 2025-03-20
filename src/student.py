@@ -15,6 +15,7 @@ class Student(Person):
         self.grades = {}  # Dictionary to store grades for subjects
         self.attendance_record = []  # List to track attendance for each class
 
+
     def assign_grades(self, grades):
 
         """
@@ -50,6 +51,7 @@ class Student(Person):
         """
         return f"{self.name} is a student with ID {self.student_id}. Their responsibilities include attending classes, completing assignments, and taking exams."
    
+
     def attendance(self, class_name, attended):
         """
         Tracks attendance for a specific class.
@@ -64,6 +66,7 @@ class Student(Person):
         status = "Present" if attended else "Absent"
         self.attendance_record.append((class_name, status))
         return f"Attendance for {class_name} marked as {status} for {self.name}."
+
 
     def get_attendance_summary(self):
         """

@@ -15,6 +15,7 @@ class Staff(Person):
         self.years_of_service = years_of_service  # Number of years the staff member has worked
         self.calculated_salary = 0  # Placeholder for the calculated salary
 
+
     def role_duties(self):
         """
         Describe specific responsibilities for a staff member.
@@ -23,6 +24,7 @@ class Staff(Person):
             str: A description of staff responsibilities.
         """
         return f"{self.name} is a staff member with ID {self.staff_id}. Their responsibilities include managing logistics, maintaining facilities, and supporting school operations."
+
 
     def calculate_salary(self, bonus_per_year=1000):
         """
@@ -36,6 +38,7 @@ class Staff(Person):
         """
         self.calculated_salary = self.base_salary + (self.years_of_service * bonus_per_year)
         return self.calculated_salary
+
 
     def get_salary(self):
         """
