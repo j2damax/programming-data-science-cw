@@ -17,3 +17,6 @@ pip-log.txt
 .DS_Store
 Thumbs.db
 
+# Exclude the report folder
+report/
+report/**
